@@ -13,7 +13,7 @@ library("ggrepel")
 SC_EXP_NAME <- "1C_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1C.tsv"
 
-OUTDIR <- paste0("../analysis/wes/out_", SC_EXP_NAME, "-WES_intersect")
+OUTDIR <- paste0("../wes_matrices/out_", SC_EXP_NAME, "-WES_intersect")
 
 NORM_COUNT_TABLE <- file.path(OUTDIR, "matrix.tsv")
 COL_ANNOTATION <- file.path(OUTDIR, "cl_annotation.txt")
@@ -78,7 +78,7 @@ dev.off()
 
 TOP <- 10
 
-OUTDIR <- paste0("../analysis/wes/out_double_treatment_", SC_EXP_NAME, "-WES")
+OUTDIR <- paste0("../wes_matrices/out_double_treatment_", SC_EXP_NAME, "-WES")
 
 NORM_COUNT_TABLE <- file.path(OUTDIR, "matrix.tsv")
 COL_ANNOTATION <- file.path(OUTDIR, "cl_annotation.txt")
@@ -152,7 +152,7 @@ dev.off()
 SC_EXP_NAME <- "1E_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1E.tsv"
 
-OUTDIR <- paste0("../analysis/wes/out_", SC_EXP_NAME, "-WES_intersect")
+OUTDIR <- paste0("../wes_matrices/out_", SC_EXP_NAME, "-WES_intersect")
 
 NORM_COUNT_TABLE <- file.path(OUTDIR, "matrix.tsv")
 COL_ANNOTATION <- file.path(OUTDIR, "cl_annotation.txt")
@@ -218,7 +218,7 @@ dev.off()
 
 TOP <- 10
 
-OUTDIR <- paste0("../analysis/wes/out_double_treatment_", SC_EXP_NAME, "-WES")
+OUTDIR <- paste0("../wes_matrices/out_double_treatment_", SC_EXP_NAME, "-WES")
 
 NORM_COUNT_TABLE <- file.path(OUTDIR, "matrix.tsv")
 COL_ANNOTATION <- file.path(OUTDIR, "cl_annotation.txt")

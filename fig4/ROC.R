@@ -15,11 +15,7 @@ EXP_NAME <- "EXP1C"
 
 DF <- file.path("../tables", paste0("DATA_FRAME_",EXP_NAME,".tsv"))
 
-AUC <- "module_cell_AUC_1C.tsv"
-
-META <- c("expr.GBC.num","expr.GBC.list","DRC_bulk","DRC_bulk_wilcox","DRC_bulk_fisher","DRC_bulk_gam",
-          "TIC","TIC_wilcox","TIC_fisher","TIC_gam",
-          "treated_TIC","treated_TIC_wilcox","treated_TIC_fisher","treated_TIC_gam","DRC_sc") 
+AUC <- "../multiome/module_cell_AUC_1C.tsv"
           
 CLUSTER_S1 <- "1"
 CLUSTER_S3 <- "3"
@@ -66,7 +62,7 @@ dev.off()
 
 EXP <- "1C_ARC"
 
-OBJECT <- file.path(DIR, EXP, paste0(EXP,"_seurat.Rds"))
+OBJECT <- "../cistopic_objects/1C_ARC_seurat_cisTopicObject.Rds"
 DF <- file.path("../tables", paste0("DATA_FRAME_",EXP_NAME,".tsv"))
           
 TOPIC <- "Topic_15"
@@ -102,11 +98,7 @@ EXP_NAME <- "EXP1E"
 
 DF <- file.path("../tables", paste0("DATA_FRAME_",EXP_NAME,".tsv"))
 
-AUC <- "module_cell_AUC_1E.tsv"
-
-META <- c("expr.GBC.num","expr.GBC.list","DRC_bulk","DRC_bulk_wilcox","DRC_bulk_fisher","DRC_bulk_gam",
-          "TIC","TIC_wilcox","TIC_fisher","TIC_gam",
-          "treated_TIC","treated_TIC_wilcox","treated_TIC_fisher","treated_TIC_gam","DRC_sc") 
+AUC <- "../multiome/module_cell_AUC_1E.tsv" 
 
 CLUSTER_S1 <- "1"
 CLUSTER_S3 <- "3"
@@ -153,7 +145,7 @@ dev.off()
 
 EXP <- "1E_ARC"
 
-OBJECT <- file.path(DIR, EXP, paste0(EXP,"_seurat.Rds"))
+OBJECT <- "../cistopic_objects/1E_ARC_seurat_cisTopicObject.Rds"
 DF <- file.path("../tables", paste0("DATA_FRAME_",EXP_NAME,".tsv"))
           
 TOPIC <- "Topic_19"

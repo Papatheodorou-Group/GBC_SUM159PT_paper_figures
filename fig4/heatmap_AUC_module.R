@@ -16,9 +16,9 @@ TOP <- 240
 SC_EXP_NAME <- "1C_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1C.tsv"
 
-TOPIC_PAIRS <- "../analysis/multiome/cisTopic_all/1C_ARC_seurat_cisTopicObject_1E_ARC_seurat_cisTopicObject_IDR_0.05_size_list_CLEAN.csv"
+TOPIC_PAIRS <- "../multiome/IDR_1C_ARC-1E_ARC.csv"
+IN_TABLE <- "../multiome/module_cell_AUC_1C.tsv"
 
-IN_TABLE <- "module_cell_AUC_1C.tsv"
 OUT_TABLE <- "AUC_module_cell_AUC_1C.tsv"
 HEATMAP_AUC <- "heatmap_AUC_module_cell_AUC_1C.pdf"
 
@@ -97,7 +97,8 @@ dev.off()
 SC_EXP_NAME <- "1E_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1E.tsv"
 
-IN_TABLE <- "module_cell_AUC_1E.tsv"
+IN_TABLE <- "../multiome/module_cell_AUC_1E.tsv"
+
 OUT_TABLE <- "AUC_module_cell_AUC_1E.tsv"
 HEATMAP_AUC <- "heatmap_AUC_module_cell_AUC_1E.pdf"
 

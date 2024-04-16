@@ -14,10 +14,8 @@ METHOD <- "MAST"
 CLMODE1 <- "clusters_pca_vst_top1000_k40_res0.5"
 CLMODE2 <- "clusters_pca_vst_top1000_k40_res0.5"
 
-SIGNATURE <- "DEG_P0_signature.tsv"
 HEATMAP_DATA <- "heatmap_DEG_P0_signature.tsv"
 HEATMAP <- "heatmap_DEG_P0_signature.pdf"
-HEATMAP_HORIZ <- "heatmap_DEG_P0_signature_horizontal.pdf"
 
 CLS1 <- c("6","2","5")
 CLS2 <- c("6","2","4")
@@ -115,34 +113,6 @@ h <- Heatmap(M, name = "log2(FC)", col = col_fun, top_annotation = ha, right_ann
 	column_names_gp = gpar(fontsize = 9), row_names_gp = gpar(fontsize = 9))
 
 pdf(HEATMAP, width = 3, height = 5)
-draw(h)
-dev.off()
-
-CLS1_NAMES <- paste0(c(""," ", "   "),"T0")
-CLS2_NAMES <- paste0(c(""," ", "   "),"T1")
-
-colnames(M) <- unlist(lapply(1:3, function(x) c(CLS1_NAMES[x],CLS2_NAMES[x])))
-
-# select palette for clusters
-
-col1 <- brewer.pal(n = length(CLS1_NAMES), name = "Set1")
-col2 <- brewer.pal(n = length(CLS2_NAMES), name = "Set2")
-cols <- c(col1,col2)
-names(cols) <- c(CLS1_NAMES,CLS2_NAMES)
-cols <- cols[match(names(cols),colnames(M))]
-
-# horizontal layout
-anno <- HeatmapAnnotation(highlight = anno_mark(at = gene_labels_id, labels = gene_labels, side = 'top', 
-           labels_rot = 60, labels_gp = gpar(fontsize = 9)), which = "column")
-ha <- HeatmapAnnotation(cluster = colnames(M), which = "row", col = list(cluster = cols), show_legend = FALSE)
-h <- Heatmap(t(M), name = "log2(FC)", col = col_fun, left_annotation = ha, top_annotation = anno,
-	cluster_rows = FALSE, cluster_columns = FALSE, show_row_names = TRUE, show_column_names = FALSE, 
-	row_names_side = "left", 
-	row_split = c(1,1,2,2,3,3), 
-	column_split = split, 
-	column_names_gp = gpar(fontsize = 9), row_names_gp = gpar(fontsize = 9))
-
-pdf(HEATMAP_HORIZ, width = 6, height = 3)
 draw(h)
 dev.off()
 

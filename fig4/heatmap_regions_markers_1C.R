@@ -1,18 +1,14 @@
 
-TOPIC_DIR <- "../analysis/multiome/cisTopic_all/IDR_files"
-TOPIC_PREFIX <- file.path(TOPIC_DIR, "1C_ARC_seurat_cisTopicObject_1E_ARC_seurat_cisTopicObject")
-TOPIC_SUFFIX <- "IDR_0.05_with_cluster_markers.csv"
+TOPIC_PREFIX <- "../multiome/IDR_1C_ARC-1E_ARC_"
 
 TOPIC_1C <- c("2","31","27","15")
 TOPIC_1E <- c("16","15","14","19")
 
 CLUSTER_ENRICH <- list(c("S1","S3"),c("S2"),c("S1"),c("S3"))
 
-OBJECT <- "../analysis/multiome/1C_ARC/1C_ARC_seurat.Rds"
+OBJECT <- "../seurat_objects/P0_multiome_EXP1C.Rds"
 
 SC_EXP_NAME <- "1C_ARC"
-OUTDIR <- paste0("../analysis/wes/out_", SC_EXP_NAME, "-WES_intersect")
-COL_ANNOTATION <- file.path(OUTDIR, "cl_annotation.txt")
 TABLE <- "../tables/DATA_FRAME_EXP1C.tsv"
 
 # TOP <- 50
@@ -36,7 +32,7 @@ idx_cl_enrich <- c()
 TOP <- rep(0,length(TOPIC_1C))
 for (i in 1:length(TOPIC_1C)) {
     
-    filename <- paste(TOPIC_PREFIX, TOPIC_1C[i], TOPIC_1E[i], TOPIC_SUFFIX, sep = "_")
+    filename <- paste0(TOPIC_PREFIX, TOPIC_1C[i], "-", TOPIC_1E[i], ".csv")
     data <- read.csv2(filename, sep = ";", header = TRUE)
 
     # sort by markers first, so that the region with the marker is reported on top if probs are equal

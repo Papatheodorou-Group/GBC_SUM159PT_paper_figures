@@ -12,9 +12,8 @@ library("ComplexHeatmap")
 SC_EXP_NAME <- "1C_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1C.tsv"
 
-TOPIC_PAIRS <- "../analysis/multiome/cisTopic_all/1C_ARC_seurat_cisTopicObject_1E_ARC_seurat_cisTopicObject_IDR_0.05_size_list_CLEAN.csv"
-
-IN_TABLE <- "module_cell_AUC_1C.tsv"
+TOPIC_PAIRS <- "../multiome/IDR_1C_ARC-1E_ARC.csv"
+IN_TABLE <- "../multiome/module_cell_AUC_1C.tsv"
 IN_AUC_TABLE <- "AUC_module_cell_AUC_1C.tsv"
 
 HEATMAP_SCALED <- "heatmap_module_cell_AUC_1C_scaled_selected.pdf"
@@ -93,9 +92,7 @@ dev.off()
 SC_EXP_NAME <- "1E_ARC"
 TABLE <- "../tables/DATA_FRAME_EXP1E.tsv"
 
-TOPIC_PAIRS <- "../analysis/multiome/cisTopic_all/1C_ARC_seurat_cisTopicObject_1E_ARC_seurat_cisTopicObject_IDR_0.05_size_list_CLEAN.csv"
-
-IN_TABLE <- "module_cell_AUC_1E.tsv"
+IN_TABLE <- "../multiome/module_cell_AUC_1E.tsv"
 IN_AUC_TABLE <- "AUC_module_cell_AUC_1E.tsv"
 
 HEATMAP_SCALED <- "heatmap_module_cell_AUC_1E_scaled_selected.pdf"

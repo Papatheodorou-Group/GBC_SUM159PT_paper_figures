@@ -6,7 +6,6 @@ TABLE <- "../tables/DATA_FRAME_GBC_IN_VIVO.tsv"
 SAMPLES <- c("P0_R4","P0_PERT2","P0_PERT3")
 
 CUMPLOT <- "cumulative_GBC_tumor_P0.pdf"
-CUMPLOT_DATA <- "cumulative_GBC_tumor_P0.tsv"
 
 # load libraries
 
